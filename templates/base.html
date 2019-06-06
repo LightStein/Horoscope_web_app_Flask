@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Signs mean Everything</title>
+</head>
+<body>
+
+    <h1>Get Aware of your future by Horoscope</h1>
+    
+    <form class="form" method="POST" action="/">
+    <div>
+        <label class="label" for="sign"><h2>Your Sign:</h2></label>
+        <input list="horoscopes" name="sign" id="sign" required>
+    </div>
+    
+    <datalist id="horoscopes">
+        <option value="Aries">
+        <option value="Taurus">
+        <option value="Gemini">
+        <option value="Cancer">
+        <option value="Leo">
+        <option value="Aries">
+        <option value="Virgo">
+        <option value="Libra">
+        <option value="Scorpio">
+        <option value="Sagittarius">
+        <option value="Capricorn">
+        <option value="Aquarius">
+        <option value="Pisces">
+    </datalist>
+
+    <input class="submit" type="submit" value="Predict"/> 
+    </form>
+    <p class="info">
+        {{info}}
+    </p>
+</body>
+</html>
